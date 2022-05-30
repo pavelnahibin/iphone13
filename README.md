@@ -1,2 +1,10 @@
-# iphone13
-promo page Iphone 13
+# iphone13 - Тестовый проект
+
+Подготовил - Нагибин Павел
+
+## Используемые технологии:
+
+- HTML
+- CSS
+- Normolize
+- JavaScript
