@@ -1,0 +1,49 @@
+html {
+   position: relative;
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+body {
+   min-width: 320px;
+   min-height: 100vh;
+
+   font-family: "SF UI Text", sans-serif; /* указать шрифт под проект*/
+   font-size: 20px;
+   font-weight: 500;
+   color: #000; /*цвет текста*/
+   background-color: #fff;/*цвет обложки*/
+   line-height: 1;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+button {
+   padding: 0;
+   cursor: pointer;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+} 
+
+ul, ol {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+h1, h2, h3, p,
+figure,
+fieldset {
+   margin: 0;
+}
