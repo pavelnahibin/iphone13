@@ -10,6 +10,228 @@
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
-    <h1>Iphone 13</h1>
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <img
+            src="img/apple.svg"
+            alt="Логотип компанії Apple"
+            class="header__logo"
+          />
+
+          <nav class="header__navigation navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="#"></a>Зробити предзамовлення
+              </li>
+              <li class="navigation__item"><a href="#"></a>Доставка</li>
+              <li class="navigation__item">
+                <a href="#"></a>Офіційний сайт Apple
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="main__section offer">
+        <div class="container">
+          <div class="offer__container">
+            <h1 class="offer__main-title">iPhone 13</h1>
+
+            <h2 class="offer__title">Ближче, ніж можна уявити.</h2>
+
+            <p class="offer__price">Від 31 000 грн.</p>
+
+            <button class="offer__btn btn">Зробити предзамовлення</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__section features">
+        <div class="container">
+          <h2 class="features__title">iPhone 13. Нічого зайвого</h2>
+
+          <ul class="features__list">
+            <li class="features__item card">
+              <img
+                src="img/camera.jpg"
+                alt="Новий модуль камер"
+                class="card__picture"
+              />
+
+              <h3 class="card__title">Камера</h3>
+
+              <p class="card__description">Система камер PRO.</p>
+            </li>
+
+            <li class="features__item card">
+              <img
+                src="img/compect.jpg"
+                alt="Комплект із зарядки та бездротових навушників"
+                class="card__picture"
+              />
+
+              <h3 class="card__title">Комплектація</h3>
+
+              <p class="card__description">
+                Зарядний пристрій.<br />Безпровідні навушники.
+              </p>
+            </li>
+
+            <li class="features__item card">
+              <img
+                src="img/color.jpg"
+                alt="Унікальні кольори iPhone"
+                class="card__picture"
+              />
+
+              <h3 class="card__title">Колір</h3>
+
+              <p class="card__description">
+                Глибоководний синій.<br />графітовий.
+              </p>
+            </li>
+
+            <li class="features__item card">
+              <img
+                src="img/frame.jpg"
+                alt="Водонепроникний та протиударний корпус."
+                class="card__picture"
+              />
+
+              <h3 class="card__title">Корпус</h3>
+
+              <p class="card__description">
+                Водонепроникний та протиударний корпус.
+              </p>
+            </li>
+
+            <li class="features__item card">
+              <img
+                src="img/line.jpg"
+                alt="Різні моделі iPhone"
+                class="card__picture"
+              />
+
+              <h3 class="card__title">Лінійка</h3>
+
+              <p class="card__description">
+                iPhone 13, iPhone 13 mini, iPhone 13 Pro и 13 Pro Max.
+              </p>
+            </li>
+
+            <li class="features__item card">
+              <img
+                src="img/charger_magnetic.jpg"
+                alt="Зарядний пристрій на магниті"
+                class="card__picture"
+              />
+
+              <h3 class="card__title">Зарядка</h3>
+
+              <p class="card__description">Акумулятор-магніт.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="main__section order">
+        <div class="container">
+          <h2 class="order__title">Зробити предзамовлення</h2>
+
+          <form action="#" class="order__form form">
+            <fieldset class="form__box">
+              <legend class="form__title-box">Персональні дані</legend>
+
+              <label for="fullName" class="form__label">ПІБ</label>
+              <input
+                type="text"
+                class="form__input"
+                id="fullName"
+                name="fullName"
+              />
+
+              <label for="phone" class="form__label">Телефон</label>
+              <input type="text" class="form__input" id="phone" name="phone" />
+
+              <label for="email" class="form__label">E-mail</label>
+              <input type="email" class="form__input" id="email" name="email" />
+            </fieldset>
+            <fieldset class="form__box">
+              <legend class="form__title-box">Адреса доставки</legend>
+
+              <label for="city" class="form__label">Місто</label>
+              <input type="text" class="form__input" id="city" name="city" />
+
+              <label for="index" class="form__label">Індекс</label>
+              <input type="text" class="form__input" id="index" name="index" />
+
+              <label for="address" class="form__label">Адреса</label>
+              <input
+                type="text"
+                class="form__input"
+                id="address"
+                name="address"
+              />
+            </fieldset>
+            <fieldset class="form__box">
+              <legend class="form__title-box">Вибір моделі</legend>
+
+              <label for="model" class="form__label">Модель</label>
+              <select name="model" id="model" class="form__select">
+                <option value="iPhone13">iPhone 13</option>
+                <option value="iPhone13mini">iPhone 13 mini</option>
+                <option value="iPhone13Pro">iPhone 13 Pro</option>
+                <option value="iPhone13ProMax">iPhone 13 Pro Max</option>
+              </select>
+
+              <label for="color" class="form__label">Колір</label>
+              <select name="color" id="color" class="form__select">
+                <option value="SierraBlue">Sierra Blue</option>
+                <option value="Pink">Pink</option>
+                <option value="Starlight">Starlight</option>
+                <option value="Gold">Gold</option>
+                <option value="Graphite">Graphite</option>
+                <option value="Midnight">Midnight</option>
+              </select>
+            </fieldset>
+            <fieldset class="form__box">
+              <legend class="form__title-box">Аксесуари</legend>
+              <label class="form__label checkbox">
+                <input type="chekbox" name="accessories" id="case" />Чохол
+              </label>
+
+              <label class="form__label checkbox">
+                <input
+                  type="chekbox"
+                  name="accessories"
+                  id="AirPods"
+                />Навушники AirPods 3
+              </label>
+
+              <label class="form__label checkbox">
+                <input type="chekbox" name="accessories" id="glass" />Зазисне
+                скло
+              </label>
+
+              <label class="form__label checkbox">
+                <input type="chekbox" name="accessories" id="MagSafe" />Зарядний
+                пристрій MagSafe
+              </label>
+            </fieldset>
+
+            <button type="submit" class="form__submit btn">Оформити</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© iPhone 13 Promo, 2022</p>
+      <p>Design by Anastasia Ilina</p>
+      <a href="ilina9825@gmail.com">ilina9825@gmail.com</a>
+    </footer>
   </body>
 </html>
