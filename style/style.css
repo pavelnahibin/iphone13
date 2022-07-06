@@ -123,7 +123,14 @@ fieldset {
    padding: 30px;
    margin: 0 -30px;
    min-height: 852px;
-   background-image: url("../img/phones.jpg");
+   background-image: -webkit-image-set(
+      url("../img/phones-2x.jpg") 2x,
+      url("../img/phones.jpg") 1x
+   );
+   background-image: image-set(
+      url("../img/phones-2x.jpg") 2x,
+      url("../img/phones.jpg") 1x
+   );
    background-repeat: no-repeat;
    background-position: bottom;
    background-size: 1290px;
@@ -131,11 +138,7 @@ fieldset {
    flex-direction: column;
    align-items: center;
 }
-@media(min-resolution: 2dppx){
-   .offer__container{
-      background-image: url("../img/phones-2x.jpg");
-   }
-}
+
 .offer__main-title {
    font-weight: 500;
    font-size: 20px;
