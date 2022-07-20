@@ -5,29 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apple iPhone 13</title>
+
+    <link
+      rel="preload"
+      href="fonts/SFUIText-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/SFUIText-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/SFUIText-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/choices.min.css" />
     <link rel="stylesheet" href="style/fonts.css" />
     <link rel="stylesheet" href="style/style.css" />
     <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+
+    <script defer src="js/jquery-3.6.0.min.js"></script>
+    <script defer src="js/choices.min.js"></script>
+    <script defer src="js/script.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="header__container">
-          <img
-            src="img/apple.svg"
-            alt="Логотип компанії Apple"
-            class="header__logo"
-          />
+          <a href="/">
+            <img
+              src="img/apple.svg"
+              alt="Логотип компанії Apple"
+              class="header__logo"
+          /></a>
 
           <nav class="header__navigation navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a href="#"></a>Зробити предзамовлення
+                <a href="#order-title">Зробити предзамовлення</a>
               </li>
-              <li class="navigation__item"><a href="#"></a>Доставка</li>
+              <li class="navigation__item"><a href="#">Доставка</a></li>
               <li class="navigation__item">
-                <a href="#"></a>Офіційний сайт Apple
+                <a href="https://www.apple.com/ua/" target="_blank"
+                  >Офіційний сайт Apple</a
+                >
               </li>
             </ul>
           </nav>
@@ -45,7 +76,9 @@
 
             <p class="offer__price">Від 31 000 грн.</p>
 
-            <button class="offer__btn btn">Зробити предзамовлення</button>
+            <a href="#order-title"
+              ><button class="offer__btn btn">Зробити предзамовлення</button></a
+            >
           </div>
         </div>
       </section>
@@ -188,41 +221,74 @@
 
       <section class="main__section order">
         <div class="container">
-          <h2 class="order__title">Зробити предзамовлення</h2>
+          <h2 id="order-title" class="order__title">Зробити предзамовлення</h2>
 
-          <form action="#" class="order__form form">
+          <form
+            action="https://jsonplaceholder.typicode.com/posts"
+            method="post"
+            class="order__form form"
+            id="form-order"
+          >
             <fieldset class="form__box">
               <legend class="form__title-box">Персональні дані</legend>
 
-              <label for="fullName" class="form__label">ПІБ</label>
+              <label for="fullName" class="form__label">ПІБ<sup>*</sup></label>
               <input
                 type="text"
                 class="form__input"
                 id="fullName"
                 name="fullName"
+                required
               />
 
-              <label for="phone" class="form__label">Телефон</label>
-              <input type="text" class="form__input" id="phone" name="phone" />
+              <label for="phone" class="form__label">Телефон<sup>*</sup></label>
+              <input
+                type="text"
+                class="form__input"
+                id="phone"
+                name="phone"
+                required
+              />
 
-              <label for="email" class="form__label">E-mail</label>
-              <input type="email" class="form__input" id="email" name="email" />
+              <label for="email" class="form__label">E-mail<sup>*</sup></label>
+              <input
+                type="email"
+                class="form__input"
+                id="email"
+                name="email"
+                required
+              />
             </fieldset>
             <fieldset class="form__box">
               <legend class="form__title-box">Адреса доставки</legend>
 
-              <label for="city" class="form__label">Місто</label>
-              <input type="text" class="form__input" id="city" name="city" />
+              <label for="city" class="form__label">Місто<sup>*</sup></label>
+              <input
+                type="text"
+                class="form__input"
+                id="city"
+                name="city"
+                required
+              />
 
-              <label for="index" class="form__label">Індекс</label>
-              <input type="text" class="form__input" id="index" name="index" />
+              <label for="index" class="form__label">Індекс<sup>*</sup></label>
+              <input
+                type="text"
+                class="form__input"
+                id="index"
+                name="index"
+                required
+              />
 
-              <label for="address" class="form__label">Адреса</label>
+              <label for="address" class="form__label"
+                >Адреса<sup>*</sup></label
+              >
               <input
                 type="text"
                 class="form__input"
                 id="address"
                 name="address"
+                required
               />
             </fieldset>
             <fieldset class="form__box">
@@ -249,44 +315,62 @@
             <fieldset class="form__box">
               <legend class="form__title-box">Аксесуари</legend>
               <label class="form__label checkbox">
-                <input type="checkbox" name="accessories" id="case" />Чохол
+                <input
+                  class="checkbox__input"
+                  type="checkbox"
+                  name="accessories"
+                  value="case"
+                />Чохол
               </label>
 
               <label class="form__label checkbox">
                 <input
+                  class="checkbox__input"
                   type="checkbox"
                   name="accessories"
-                  id="AirPods"
+                  value="AirPods"
+                  disabled
                 />Навушники AirPods 3
               </label>
 
               <label class="form__label checkbox">
-                <input type="checkbox" name="accessories" id="glass" />Захисне
-                скло
+                <input
+                  class="checkbox__input"
+                  type="checkbox"
+                  name="accessories"
+                  value="glass"
+                  checked
+                />Захисне скло
               </label>
 
               <label class="form__label checkbox">
                 <input
+                  class="checkbox__input"
                   type="checkbox"
                   name="accessories"
-                  id="MagSafe"
+                  value="MagSafe"
                 />Зарядний пристрій MagSafe
               </label>
             </fieldset>
-
-            <button type="submit" class="form__submit btn">Оформити</button>
           </form>
+
+          <button type="submit" class="form__submit btn" form="form-order">
+            Оформити
+          </button>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="container footer__flex">
-        <p>
-          <small class="footer__copyright">© iPhone 13 Promo, 2022</small>
-        </p>
-        <p>Design by Anastasia Ilina</p>
-        <a href="mailto:ilina9825@gmail.com">ilina9825@gmail.com</a>
+      <div class="container container__flex">
+        <p class="footer__copy">© iPhone 13 Promo, 2021</p>
+
+        <div class="footer__author">
+          <p class="footer__author-name">Design by Anastasia Ilina</p>
+          <a href="mailto:ilina9825@gmail.com" class="footer__author-email"
+            >ilina9825@gmail.com</a
+          >
+        </div>
       </div>
     </footer>
   </body>
